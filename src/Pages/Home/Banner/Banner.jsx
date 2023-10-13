@@ -4,7 +4,7 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <section className='hero__section pt-36 2xl:h-[800px'>
+    <section className='hero__section pt-10  md:pt-36 md:pb-36 2xl:h-[850px'>
       <div className="container">
         <div className='flex flex-col lg:flex-row gap-24 items-start justify-between'>
           {/**=====bannersection===== */}
@@ -32,7 +32,7 @@ const Banner = () => {
 
               <div>
                 <h1 className='text-4xl font-extrabold'>100%</h1>
-                <span className='w-[90px] h-2 bg-blue-500 rounded-full block mt-[-12px] pb-2 mb-3'></span>
+                <span className='w-[90px] h-2 bg-sky-400 rounded-full block mt-[-12px] pb-2 mb-3'></span>
                 <p >Patient Satisfaction</p>
               </div>
 

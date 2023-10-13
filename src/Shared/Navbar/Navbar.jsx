@@ -7,28 +7,28 @@ const Navbar = () => {
 
 
     <li tabIndex={0}>
-      <Link className='font-bold' to="/">Home</Link>
+      <Link className='font-bold text-lg' to="/">Home</Link>
 
     </li>
     <li tabIndex={0}>
-      <Link className='font-bold' to="/about">Find Doctor</Link>
-
-    </li>
-
-    <li tabIndex={0}>
-      <Link className='font-bold' to="/blogs">Services</Link>
+      <Link className='font-bold text-lg' to="/about">Find Doctor</Link>
 
     </li>
 
     <li tabIndex={0}>
-      <Link className='font-bold' to="/alltoys">Contact</Link>
+      <Link className='font-bold text-lg' to="/blogs">Services</Link>
+
+    </li>
+
+    <li tabIndex={0}>
+      <Link className='font-bold text-lg' to="/alltoys">Contact</Link>
     </li>
 
 
 
   </>
   return (
-    <div className="navbar bg-base-100 h-24 navbar2">
+    <div className="navbar  h-24 navbar2 sticky__header md:px-20 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <h2>DocZone</h2>
+        <h2 className="text-xl font-extrabold">DocZone</h2>
 
       </div>
       <div className="navbar-center hidden lg:flex">
