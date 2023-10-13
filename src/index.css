@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
+
+#root {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply max-w-full w-[1440px] px-5 mx-auto;
+  }
+  .navbar2 {
+    @apply bg-[url('./assets/img/header-bg.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[100px];
+  }
+
+  .hero__section {
+    @apply bg-[url('./assets//img/hero-bg.png')] bg-no-repeat bg-center bg-cover;
+  }
+}
+
+@media only screen and (max-width: 1040px) and (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+}
