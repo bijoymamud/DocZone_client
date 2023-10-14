@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
-    <section className='md:py-32'>
+    <section className='md:py-32 pt-20'>
       <div className='container '>
         <div className='xl:w-[470px] mx-auto'>
           <h2 className='text-4xl text-center font-bold pb-3'>Our Medical Services</h2>
           <p className='w-5/6 text-center mx-auto text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-20 text-center py-32">
+        <div className="grid md:grid-cols-3 gap-20 text-center md:py-32 py-10">
           <div className="text-start">
             <h1 className="text-2xl font-extrabold">Cancer Care</h1>
             <span className='w-[90px] h-2 bg-yellow-500 rounded-full block mt-[-12px] pb-2 mb-3'></span>
