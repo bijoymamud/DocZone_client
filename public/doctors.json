@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. John Smith",
+    "specialty": "Cardiologist",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "img": "https://i.ibb.co/YLz4svP/doctor-img01.png",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Sarah Johnson",
+    "specialty": "Dermatologist",
+    "avgRating": 4.9,
+    "totalRating": 150,
+    "img": "https://i.ibb.co/GHRL45J/doctor-img02.png",
+    "totalPatients": 2500,
+    "hospital": "City General Hospital"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Michael Lee",
+    "specialty": "Pediatrician",
+    "avgRating": 4.7,
+    "totalRating": 90,
+    "img": "https://i.ibb.co/rbxd9PM/doctor-img03.png",
+    "totalPatients": 2000,
+    "hospital": "Children's Hospital"
+  }
+]
