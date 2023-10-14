@@ -40,7 +40,7 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <h2 className="text-xl font-extrabold">DocZone</h2>
+        <img className="w-[150px]" src="https://i.ibb.co/M7yTS6m/mydoczone-mankhurd-mumbai-homeopathic-clinics-mj2g6s4lkl-removebg-preview.png" alt="" />
 
       </div>
       <div className="navbar-center hidden lg:flex">

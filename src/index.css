@@ -31,6 +31,10 @@
   .hero__section {
     @apply bg-[url('./assets//img/hero-bg.png')] bg-no-repeat bg-center bg-cover;
   }
+
+  /* .footer__section {
+    @apply bg-[url('./assets/img/bg1.jpg')] bg-no-repeat bg-center bg-cover;
+  } */
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 320px) {
