@@ -46,7 +46,7 @@ const Services = () => {
                 <FaArrowAltCircleRight className=' text-2xl mt-3 ' />
 
               </Link>
-              <div className="w-[44px] py-2 font-extrabold text-sky-600 bg-sky-200 rounded-sm text-center">4</div>
+              <div className="w-[44px] py-2 font-extrabold text-sky-600 bg-sky-200 rounded-sm text-center">3</div>
             </div>
           </div>
 
