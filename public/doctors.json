@@ -1,32 +1,66 @@
 [
   {
-    "id": 1,
+    "id": "18746485887",
     "name": "Dr. John Smith",
     "specialty": "Cardiologist",
     "avgRating": 4.8,
     "totalRating": 120,
     "img": "https://i.ibb.co/YLz4svP/doctor-img01.png",
     "totalPatients": 3000,
-    "hospital": "St. Mary's Hospital"
+    "hospital": "St. Mary's Hospital",
+    "education": [
+      "Doctor of Medicine (MD)",
+      "Cardiology Residency Program",
+      "Fellowship in Cardiology"
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
   },
   {
-    "id": 2,
+    "id": "25845874754",
     "name": "Dr. Sarah Johnson",
     "specialty": "Dermatologist",
     "avgRating": 4.9,
     "totalRating": 150,
     "img": "https://i.ibb.co/GHRL45J/doctor-img02.png",
     "totalPatients": 2500,
-    "hospital": "City General Hospital"
+    "hospital": "City General Hospital",
+    "education": [
+      "Doctor of Medicine (MD)",
+      "Dermatology Residency Program",
+      "Fellowship in Cosmetic Dermatology"
+    ],
+    "experience": [
+      {
+        "title": "Dermatologist",
+        "hospital": "City General Hospital",
+        "from": "Auguts 01, 2013 - Current"
+      }
+    ]
   },
   {
-    "id": 3,
+    "id": "3857878745",
     "name": "Dr. Michael Lee",
     "specialty": "Pediatrician",
     "avgRating": 4.7,
     "totalRating": 90,
     "img": "https://i.ibb.co/rbxd9PM/doctor-img03.png",
     "totalPatients": 2000,
-    "hospital": "Children's Hospital"
+    "hospital": "Children's Hospital",
+    "education": [
+      "Doctor of Medicine (MD)",
+      "Pediatrics Residency Program",
+      "Fellowship in Pediatric Infectious Diseases"
+    ],
+    "experience": {
+      "title": "Pediatrician",
+      "hospital": "Children's Hospital",
+      "from": "Jul 23, 2007 - Fab 05, 2010"
+    }
   }
 ]

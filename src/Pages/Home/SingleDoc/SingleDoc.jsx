@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 
 const SingleDoc = ({ doctor }) => {
 
-  const { id, name, specialty, avgRating, totalRating, img, totalPatients, hospital } = doctor;
+  const { id, name, specialty, avgRating, totalRating, img, totalPatients, hospital, experience } = doctor;
+
+
   return (
     <section className=''>
       <div className="card card-compact shadow-none w-5/6 mx-auto bg-base-100 ">
@@ -24,14 +26,30 @@ const SingleDoc = ({ doctor }) => {
               <p className='font-extrabold' >+{totalPatients} patients</p>
               <small className='text-gray-500'>{hospital}</small>
             </div>
-            <Link to='/doctors'>
+            <Link to={`/singleDoc/${id}`}>
               <FaArrowCircleRight className='text-xl' />
             </Link>
+          </div>
+          <div>
+            {/* Display the experience based on doctor's structure */}
+            {/* {experience.length > 0 ? (
+              <div>
+                <h3>Experience:</h3>
+                {experience.map((exp, index) => (
+                  <div key={index}>
+                    <p>{exp.title} <br /> {exp.hospital} <br /> {exp.from} </p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>No experience data available</p>
+            )} */}
+
           </div>
 
         </div>
       </div >
-    </section>
+    </section >
   );
 };
 
