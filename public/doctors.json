@@ -23,10 +23,17 @@
     "img": "https://i.ibb.co/YLz4svP/doctor-img01.png",
     "totalPatients": 3000,
     "hospital": "St. Mary's Hospital",
-    "education": [
-      "Doctor of Medicine (MD)",
-      "Cardiology Residency Program",
-      "Fellowship in Cardiology"
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
     ],
     "experience": [
       {
@@ -60,10 +67,17 @@
     "img": "https://i.ibb.co/GHRL45J/doctor-img02.png",
     "totalPatients": 2500,
     "hospital": "City General Hospital",
-    "education": [
-      "Doctor of Medicine (MD)",
-      "Dermatology Residency Program",
-      "Fellowship in Cosmetic Dermatology"
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Osteopathic Medicine (D.O.)",
+        "yearCompleted": "21 December 2010",
+        "institution": "Osteopathic Medical College"
+      },
+      {
+        "degree": "Bachelor of Science in Biology",
+        "yearCompleted": "30 May 2006",
+        "institution": "City University"
+      }
     ],
     "experience": [
       {
@@ -98,10 +112,17 @@
     "img": "https://i.ibb.co/rbxd9PM/doctor-img03.png",
     "totalPatients": 2000,
     "hospital": "Children's Hospital",
-    "education": [
-      "Doctor of Medicine (MD)",
-      "Pediatrics Residency Program",
-      "Fellowship in Pediatric Infectious Diseases"
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Dental Medicine (D.D.M.)",
+        "yearCompleted": "03 June 2011",
+        "institution": "Dental School of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Biochemistry",
+        "yearCompleted": "30 March 2007",
+        "institution": "Metropolitan University"
+      }
     ],
     "experience": {
       "title": "Pediatrician",
