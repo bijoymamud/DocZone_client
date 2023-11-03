@@ -21,14 +21,14 @@ const Navbar = () => {
     </li>
 
     <li tabIndex={0}>
-      <Link className='font-bold text-lg' to="/alltoys">Contact</Link>
+      <Link className='font-bold text-lg' to="/contact">Contact</Link>
     </li>
 
 
 
   </>
   return (
-    <div className="navbar  h-24 navbar2 sticky__header md:px-20 ">
+    <div className="navbar  h-24 navbar2 sticky__header md:px-20  ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

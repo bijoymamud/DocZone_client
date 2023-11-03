@@ -17,7 +17,7 @@ const DocDetails = () => {
 
       <div className='flex gap-10 mx-auto'>
 
-        <div>
+        <div className='w-full'>
           <div className='flex gap-5 '>
             <div>
               <img className='h-[200px] w-[200px]' src={info.img} alt="" />
@@ -35,8 +35,8 @@ const DocDetails = () => {
           </div>
 
 
-          <div className='md:pt-20 '>
-            <Tabs>
+          <div className='md:pt-32 '>
+            <Tabs  >
               <TabList>
                 <Tab>About</Tab>
                 <Tab>FeedBack</Tab>
@@ -73,9 +73,9 @@ const DocDetails = () => {
                         <ul className='text-gray-500 mb-5 '>
                           <span className='pb-20'>
                             {info?.educationalInfo.map((plot) => (
-                              <li className='flex items-center justify-between gap-10 pb-6' key={plot.id}>
+                              <li className='flex items-end justify-between gap-10 pb-6' key={plot.id}>
                                 {plot.yearCompleted} <br />{plot.degree}
-                                <div className='flex items-center text-pink-500 font-bold' >
+                                <div className='flex items-end text-pink-500 font-bold' >
                                   {plot.institution}
                                 </div>
                               </li>
@@ -100,6 +100,7 @@ const DocDetails = () => {
               <div className='w-full'>
                 <TabPanel>
                   <h2>Feedback content</h2>
+                  <p>Content will run from backend</p>
                 </TabPanel>
               </div>
 
@@ -109,7 +110,7 @@ const DocDetails = () => {
 
         </div >
 
-        <div>
+        <div className='w-2/4'>
           <div className=' p-5 shadow-xl rounded-md'>
             <div className=' flex items-center justify-between gap-20'>
               <h1 className='text-gray-600 font-semibold'>Ticket Price</h1>
