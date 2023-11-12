@@ -66,34 +66,34 @@ const Contact = () => {
         <div className="md:w-3/4 md:ms-10">
           <div className="mb-10">
             <h1 className="border-l-8 border-teal-600 text-3xl font-semibold ps-5 mb-3">
-              Contact Our <br /> Instructors
+              Contact Our <br /> Team
             </h1>
-            <p>
+            <p className='text-gray-500'>
               If you have any specific questions or need to reach out for
               support, you can try sending an email.
             </p>
           </div>
-          <div className="space-y-5">
+          <div className="space-y-5 text-gray-500">
             <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-3xl" />
+              <FaMapMarkerAlt className="text-3xl text-black" />
               <p>
                 Dhanmondi-32, Dhaka <br /> Bangladesh
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-3xl" />
+              <FaPhoneAlt className="text-3xl text-black" />
               <p>
                 +880 1234567890 <br /> +8802364786732
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-3xl" />
+              <FaMapMarkerAlt className="text-3xl text-black" />
               <p>
                 Dhanmondi-32, Dhaka <br /> Bangladesh
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-3xl" />
+              <FaMapMarkerAlt className="text-3xl text-black" />
               <p>
                 Dhanmondi-32, Dhaka <br /> Bangladesh
               </p>
