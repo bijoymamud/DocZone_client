@@ -11,7 +11,7 @@ const Navbar = () => {
 
     </li>
     <li tabIndex={0}>
-      <Link className='font-bold text-lg' to="/about">Find Doctor</Link>
+      <Link className='font-bold text-lg' to="/findDoc">Find Doctor</Link>
 
     </li>
 

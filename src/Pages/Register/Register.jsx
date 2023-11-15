@@ -1,79 +1,84 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
+
 
 const Register = () => {
 
-  const {
-    register,
-    handleSubmit,
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const confirm = form.confirm.value;
+    const image = form.image.value;
+    const name = form.displayName.value;
+    const address = form.address.value;
+    const number = form.number.value;
+    console.log(email, password, confirm, image, name, address, number);
+  }
 
-    formState: { errors }
-  } = useForm()
   return (
-    <div className='Auth_bg'>
+    <div className='Auth_bg '>
 
-      <div className='min-h-screen hero container mx-auto'>
+      <div className='min-h-screen py-16  container mx-auto'>
         <div className='items-center justify-between gap-10 px-3 md:flex'>
-          <div className='md:w-1/2'>
+          <div className='md:w-2/6'>
             <img src='https://i.ibb.co/jDMz1bj/login-page-banner.png' alt='' />
 
           </div>
-          <div className='flex-shrink-0 w-full  ag-transparent border   rounded-lg shadow-xl md:w-1/2 card backdrop-blur-sm'>
+          <div className='flex-shrink-0 w-full  bg-transparent   rounded-lg  md:w-1/2 card backdrop-blur-sm'>
             <div className='text-center '>
               <h1 className='my-5 text-4xl font-bold '>
                 Registration
               </h1>
             </div>
             <div className='  card-body'>
-              <form onSubmit={handleSubmit()} className='! '>
+              <form onSubmit={handleSignUp} className='! '>
                 <div className='grid-cols-2 gap-3 md:grid'>
                   <div className='form-control'>
                     <label className='label'>
                       <span className='label-text'>Name</span>
                     </label>
                     <input
-                      {...register('name', { required: true })}
+                      name='displayName'
                       type='text'
+                      required
                       placeholder='Enter your name'
-                      className=' ag-transparent input input-bordered'
+                      className='dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 ag-transparent input input-bordered'
                     />
-                    {errors.name && <span>This field is required</span>}
+
                   </div>
                   <div className='form-control'>
                     <label className='label'>
                       <span className='label-text'>Email</span>
                     </label>
                     <input
-                      {...register('email', { required: true })}
-                      type='email'
+                      name='email'
+                      type='email
+                      required'
                       placeholder='Enter your email'
-                      className=' ag-transparent input input-bordered'
+                      className='dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 ag-transparent input input-bordered'
                     />
-                    {errors.email && <span>This field is required</span>}
+
                   </div>
                   <div className='form-control'>
                     <label className='label'>
                       <span className='label-text'>Password</span>
                     </label>
                     <input
-                      {...register('password', {
-                        required: 'Password field is required',
-                        minLength: {
-                          value: 6,
-                          message: 'Password must be at least 6 characters'
-                        }
-                      })}
-                      type={'password'}
+                      name='password'
+                      type='password'
+                      required
                       placeholder='Enter your password'
-                      className=' ag-transparent input input-bordered'
+                      className='dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 ag-transparent input input-bordered'
                     />
                     <label className='label'>
                       <a className='label-aext-alt link link-hover'>
 
                       </a>
                     </label>
-                    {errors.password && <span>{errors.password.message}</span>}
+
                   </div>
 
                   <div className='form-control'>
@@ -81,27 +86,26 @@ const Register = () => {
                       <span className='label-text'>Confirm Password</span>
                     </label>
                     <input
-                      {...register('confirm', {
-                        required: 'Confirm password field is required',
-
-                      })}
-                      type={'password'}
+                      name='confirm'
+                      type='password'
+                      required
                       placeholder='Confirm password'
-                      className=' ag-transparent input input-bordered'
+                      className='dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 ag-transparent input input-bordered'
                     />
-                    {errors.confirm && <span>{errors.confirm.message}</span>}
+
                   </div>
                   <div className='form-control'>
                     <label className='label'>
                       <span className='label-text'>Contact Number</span>
                     </label>
                     <input
-                      {...register('number', { required: true })}
-                      type='number'
+                      name='number'
+                      type='numbe
+                      requiredr'
                       placeholder='+880'
-                      className=' ag-transparent input input-bordered'
+                      className='dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 ag-transparent input input-bordered'
                     />
-                    {errors.number && <span>This field is required</span>}
+
                   </div>
                   <div className='form-control'>
                     <label className='label'>
@@ -109,17 +113,14 @@ const Register = () => {
                     </label>
                     <div className='items-center border-2 rounded-lg form-control   '>
                       <input
-                        {...register('image', { required: true })}
+
                         name='image'
                         type='file'
-                        className='w-full col-span-5  ag-transparent  file-input'
+                        required
+                        className=' w-full col-span-5  ag-transparent  file-input'
                       />
                     </div>
-                    {errors.image && (
-                      <span className='mt-1 aext-red-500'>
-                        Image field is required
-                      </span>
-                    )}
+
                   </div>
                 </div>
                 <div className='form-control'>
@@ -127,10 +128,11 @@ const Register = () => {
                     <span className='label-text'>Address</span>
                   </label>
                   <input
-                    {...register('address', { required: true })}
+                    name='address'
                     type='text'
+                    required
                     placeholder='Enter your Address'
-                    className=' ag-transparent input input-bordered'
+                    className='dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 ag-transparent input input-bordered'
                   />
                 </div>
                 <div className='mt-5 form-control'>
@@ -138,9 +140,9 @@ const Register = () => {
                 </div>
               </form>
               <div className='text-center'>
-                <div className='divider divide-red-50'></div>
+                {/* <div className='divider divide-red-50'></div>
 
-                <div className='flex items-center justify-center gap-4 my-2'>
+                <div className='flex items-center justify-center gap-4 '>
 
                 </div>
                 <p>
@@ -148,6 +150,17 @@ const Register = () => {
                   <Link className='link link-hover' to='/login'>
                     Click Here
                   </Link>
+                </p> */}
+
+                <div className="flex items-center pt-4 space-x-1" bis_skin_checked="1">
+                  <div className="flex-1 h-px sm:w-16 dark:bg-gray-700" bis_skin_checked="1"></div>
+                  <p className="px-3 text-sm dark:text-black">SignUp with</p>
+                  <div className="flex-1 h-px sm:w-16 bg-gray-700" bis_skin_checked="1"></div>
+
+                </div>
+                <FcGoogle className='text-center mx-auto mt-3 text-2xl' />
+                <p className="text-sm mt-2 text-center mx-auto sm:px-6 dark:text-gray-400">Already have an account?
+                  <Link to="/login" rel="noopener noreferrer" href="#" className=" font-extrabold ms-2  dark:text-gray-500">SignIn</Link>
                 </p>
               </div>
             </div>
@@ -155,6 +168,8 @@ const Register = () => {
         </div>
       </div>
     </div>
+
+
   );
 };
 

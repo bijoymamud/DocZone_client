@@ -2,6 +2,7 @@ import {
   createBrowserRouter
 } from "react-router-dom";
 import Main from "../Layout/Main";
+import FindDoc from "../Pages/FindDoctor/FindDoc";
 import Contact from "../Pages/Home/Contact/Contact";
 import Home from "../Pages/Home/Homepage/Home";
 import DocDetails from "../Pages/Home/SingleDoc/DocDetails";
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register />
+      },
+      {
+        path: '/findDoc',
+        element: <FindDoc />
       },
 
       {

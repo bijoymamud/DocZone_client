@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/031/038/048/small_2x/portrait-of-hero-in-white-coat-cheerful-smiling-young-doctor-with-stethoscope-in-medical-hospital-standing-against-white-background-coronavirus-covid-19-danger-alert-photo.jpg",
+    "name": "Dr. John Smith",
+    "specialty": "Cardiology",
+    "avg_Rating": 4.8,
+    "total_Rating": 120
+  },
+  {
+    "id": 2,
+    "image": "https://static.myshlf.us/uploads/img-user-deres-2766-1637092970542",
+    "name": "Dr. Emily Johnson",
+    "specialty": "Pediatrics",
+    "avg_Rating": 4.5,
+    "total_Rating": 90
+  },
+  {
+    "id": 3,
+    "image": "https://apollocancercentres.com/images/delhi/dr-manish-singhal.png",
+    "name": "Dr. Michael Davis",
+    "specialty": "Orthopedics",
+    "avg_Rating": 4.2,
+    "total_Rating": 80
+  },
+  {
+    "id": 4,
+    "image": "https://www.shutterstock.com/image-photo/medical-concept-indian-beautiful-female-600nw-1635029716.jpg",
+    "name": "Dr. Sarah Miller",
+    "specialty": "Dermatology",
+    "avg_Rating": 4.9,
+    "total_Rating": 150
+  },
+  {
+    "id": 5,
+    "image": "https://s3.amazonaws.com/media.audiologydesign.com/wp-content/uploads/sites/934/2023/04/20183119/Benjamin_Stanowski_staff-image-e1695238966109-300x400.png",
+    "name": "Dr. Robert White",
+    "specialty": "Neurology",
+    "avg_Rating": 4.6,
+    "total_Rating": 110
+  },
+  {
+    "id": 6,
+    "image": "https://sttheresasobgyn.com/client_files/image/dr-gertrude-nkiru-anyakwo.jpg",
+    "name": "Dr. Laura Turner",
+    "specialty": "Gynecology",
+    "avg_Rating": 4.7,
+    "total_Rating": 100
+  },
+  {
+    "id": 7,
+    "image": "https://hplus.ae/wp-content/uploads/2019/02/Dr.-Rami.png",
+    "name": "Dr. Kevin Brown",
+    "specialty": "Ophthalmology",
+    "avg_Rating": 4.4,
+    "total_Rating": 95
+  },
+  {
+    "id": 8,
+    "image": "https://nsuworks.nova.edu/cnso_alumni/1157/preview.jpg",
+    "name": "Dr. Jessica Lee",
+    "specialty": "ENT",
+    "avg_Rating": 4.5,
+    "total_Rating": 85
+  },
+  {
+    "id": 9,
+    "image": "https://media.istockphoto.com/id/1390000431/photo/shot-of-a-mature-doctor-using-a-digital-tablet-in-a-modern-hospital.webp?b=1&s=170667a&w=0&k=20&c=Jxhk_KZSo9oSZ01Nv8TxjCKKEVZQJFVWICZb64AEIMQ=",
+    "name": "Dr. Andrew Clark",
+    "specialty": "Urology",
+    "avg_Rating": 4.3,
+    "total_Rating": 75
+  },
+  {
+    "id": 10,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn04Uj2kM-7xihsmeYtYqjFadal4f6wPSZuw&usqp=CAU",
+    "name": "Dr. Megan Taylor",
+    "specialty": "Psychiatry",
+    "avg_Rating": 4.8,
+    "total_Rating": 130
+  },
+  {
+    "id": 11,
+    "image": "https://s.wsj.net/public/resources/images/B3-AS768_WELLNE_4H_20180608132140.jpg",
+    "name": "Dr. William Harris",
+    "specialty": "Pulmonology",
+    "avg_Rating": 4.6,
+    "total_Rating": 105
+  },
+  {
+    "id": 12,
+    "image": "https://www.adventisthealthcare.com/app/files/public/swati-singh.png",
+    "name": "Dr. Elizabeth Green",
+    "specialty": "Rheumatology",
+    "avg_Rating": 4.7,
+    "total_Rating": 115
+  },
+  {
+    "id": 13,
+    "image": "https://media.istockphoto.com/id/1494324933/photo/portrait-of-asian-chinese-mixed-race-senior-mature-man-doctor-in-collared-business-shirt.webp?b=1&s=170667a&w=0&k=20&c=AQn0qlSIbjun7Qs0nCAnMs4pfOYGysAyL0j6KuuvhJU=",
+    "name": "Dr. Christopher Baker",
+    "specialty": "Gastroenterology",
+    "avg_Rating": 4.9,
+    "total_Rating": 140
+  },
+  {
+    "id": 14,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaTX04KwWPpQJxQ7LPnWBv168XkUlXvtH54A&usqp=CAU",
+    "name": "Dr. Olivia Turner",
+    "specialty": "Hematology",
+    "avg_Rating": 4.4,
+    "total_Rating": 95
+  },
+  {
+    "id": 15,
+    "image": "https://www.orlandohealth.com/-/media/images/2023/2023-pediatrics-residency/081823-bio-headshots/1921556-pediatric-residency-program-resident-bio-photos-auvil-300x400-final.jpg?la=en",
+    "name": "Dr. Daniel White",
+    "specialty": "Endocrinology",
+    "avg_Rating": 4.6,
+    "total_Rating": 110
+  }
+]
