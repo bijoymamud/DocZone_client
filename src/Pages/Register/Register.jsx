@@ -7,19 +7,20 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
-  const navigate = useNavigate()
+
   const [passShow, setPassShow] = useState(false)
   const {
     register,
     handleSubmit,
+    reset,
     watch,
     formState: { errors }
   } = useForm();
 
   const password = watch('password');
 
-  const { createUser } = useContext(AuthContext)
-
+  const { createUser, updateUserProfile } = useContext(AuthContext)
+  const navigate = useNavigate();
 
   const onSubmit = data => {
     console.log(data);
@@ -27,15 +28,29 @@ const Register = () => {
       .then(result => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "User Registered",
-          showConfirmButton: false,
-          timer: 1500
-        });
-        navigate('/')
+
+        updateUserProfile(data.name, data.photo)
+          .then(() => {
+            console.log('profile updated');
+            reset()
+
+
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "User Registered",
+              showConfirmButton: false,
+              timer: 1500
+            });
+            navigate('/')
+
+
+          })
+          .catch(error => console.log(error))
       })
+
+
+
   }
 
   return (
@@ -64,7 +79,7 @@ const Register = () => {
                     {...register('name', { required: true })}
                     type='text'
                     placeholder='Enter your name'
-                    className=' dark:bg-gray-900 input input-bordered'
+                    className=' dark:bg-gray-900 text-white input input-bordered'
                   />
                   {errors.name && <span>This field is required</span>}
                 </div>
@@ -76,7 +91,7 @@ const Register = () => {
                     {...register('email', { required: true })}
                     type='email'
                     placeholder='Enter your email'
-                    className=' dark:bg-gray-900 input input-bordered'
+                    className=' dark:bg-gray-900 text-white input input-bordered'
                   />
                   {errors.email && <span>This field is required</span>}
                 </div>
@@ -94,7 +109,7 @@ const Register = () => {
                     })}
                     type={passShow ? 'text' : 'password'}
                     placeholder='Enter your password'
-                    className=' dark:bg-gray-900 input input-bordered'
+                    className=' dark:bg-gray-900 text-white input input-bordered'
                   />
                   {errors.password && <span className='text-red-600'>{errors.password.message}</span>}
                   {/* <label className='label'>
@@ -125,7 +140,7 @@ const Register = () => {
                     })}
                     type={passShow ? 'text' : 'password'}
                     placeholder='Confirm password'
-                    className=' dark:bg-gray-900 input input-bordered'
+                    className=' dark:bg-gray-900 text-white input input-bordered'
                   />
                   {errors.confirm && <span className='text-red-600'>{errors.confirm.message}</span>}
                   {errors.confirm && <span className='text-red-600 mt-1'>This field is required</span>}
@@ -138,23 +153,24 @@ const Register = () => {
                     {...register('number', { required: true })}
                     type='number'
                     placeholder='+880'
-                    className=' dark:bg-gray-900 input input-bordered'
+                    className=' dark:bg-gray-900 text-white input input-bordered'
                   />
                   {errors.number && <span>This field is required</span>}
                 </div>
                 <div className='form-control'>
                   <label className='label'>
-                    <span className='label-text dark:text-gray-400'>Image</span>
+                    <span className='label-text dark:text-gray-400'>Image URL</span>
                   </label>
-                  <div className='items-center border-2 rounded-lg form-control   '>
-                    <input
-                      {...register('image', { required: true })}
-                      name='image'
-                      type='file'
-                      className='w-full col-span-5 file-input'
-                    />
-                  </div>
-                  {errors.image && (
+
+                  <input
+                    {...register('photo', { required: true })}
+                    name='photo'
+                    type='text'
+                    placeholder='Image URL'
+                    className=' dark:bg-gray-900 text-white input input-bordered'
+                  />
+
+                  {errors.photo && (
                     <span className='mt-1 aext-red-500'>
                       Image field is required
                     </span>
@@ -169,7 +185,7 @@ const Register = () => {
                   {...register('address', { required: true })}
                   type='text'
                   placeholder='Enter your Address'
-                  className=' dark:bg-gray-900 input input-bordered'
+                  className=' dark:bg-gray-900 text-white input input-bordered'
 
                 />
               </div>

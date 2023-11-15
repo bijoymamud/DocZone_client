@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Homepage/Home";
 import DocDetails from "../Pages/Home/SingleDoc/DocDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
 
       {
         path: "/singleDoc/:id",
-        element: <DocDetails />,
+        element: <PrivateRoute><DocDetails /></PrivateRoute>,
 
 
       },

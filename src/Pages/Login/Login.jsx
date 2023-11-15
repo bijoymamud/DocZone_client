@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../providers/AuthProvider';
 
 
 const Login = () => {
-  const navigate = useNavigate()
-  const { signIn } = useContext(AuthContext)
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { signIn } = useContext(AuthContext);
+
+  const from = location.state?.from?.pathname || "/";
+
   const handleLogIn = (event) => {
     event.preventDefault();
 
@@ -26,7 +30,7 @@ const Login = () => {
           showConfirmButton: false,
           timer: 1500
         });
-        navigate('/')
+        navigate(from, { replace: true });
       })
   }
 

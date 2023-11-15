@@ -70,11 +70,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <div className='flex items-center gap-5'>
-          {/* {user &&
-            <div className="tooltip  tooltip-left mt-3" data-tip={user.displayName}>
-              <button>  <img className='h-12 w-12' src={user?.photoURL} alt="" /> </button>
+          {user &&
+            <div className="tooltip  tooltip-left mt-10" data-tip={user.displayName}>
+              <button>  <img className='h-[40px] w-[40px] rounded-full' src={user?.photoURL} alt="" /> </button>
             </div>
-          } */}
+          }
 
 
           {user ?
