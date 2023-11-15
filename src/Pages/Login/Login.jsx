@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FcGoogle } from "react-icons/fc";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../providers/AuthProvider';
 
 
 const Login = () => {
-
+  const navigate = useNavigate()
+  const { signIn } = useContext(AuthContext)
   const handleLogIn = (event) => {
     event.preventDefault();
 
@@ -12,10 +15,23 @@ const Login = () => {
     const email = form.username.value;
     const password = form.password.value;
     console.log(email, password);
+    signIn(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Successfully Login",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        navigate('/')
+      })
   }
 
   return (
-    <div className='container md:flex items-center justify-evenly  gap-10 md:py-32'>
+    <div className='container md:flex items-center justify-evenly  gap-10  md:pt-40'>
 
       <div className='md:w-2/6'>
         <img src='https://i.ibb.co/jDMz1bj/login-page-banner.png' alt='' />
@@ -26,7 +42,7 @@ const Login = () => {
         <form onSubmit={handleLogIn} noValidate="" action="" className="space-y-6">
           <div className="space-y-1 text-sm" bis_skin_checked="1">
             <label htmlFor="username" className="block dark:text-gray-400">Username</label>
-            <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+            <input type="email" name="email" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
           </div>
           <div className="space-y-1 text-sm" bis_skin_checked="1">
             <label htmlFor="password" className="block dark:text-gray-400">Password</label>

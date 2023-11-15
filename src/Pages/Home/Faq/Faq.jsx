@@ -17,7 +17,7 @@ const Faq = () => {
           <div className=" w-full space-y-4 ">
             <div className="border   px-5 shadow-md rounded-md shadow-cyan-500/50">
               <details>
-                <summary className="py-2 outline-none cursor-pointer text-lg shadow-lg  ">
+                <summary className="py-2 outline-none cursor-pointer text-lg  ">
                   What is DocZone & how does it work?
                 </summary>
                 <div className="px-4 pb-4">
