@@ -89,7 +89,7 @@ const Navbar = () => {
             </label>
             <ul tabIndex={0} className="dropdown-content 
              menu p-2 shadow bg-yellow-50 rounded w-48">
-              <li><Link>Dashboard</Link></li>
+              <li><Link to='/dashboard/myAppointments'>Dashboard</Link></li>
               <li className="mt-1"><Link>Profile</Link></li>
             </ul>
           </div>
