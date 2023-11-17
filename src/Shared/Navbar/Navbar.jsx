@@ -37,7 +37,9 @@ const Navbar = () => {
       <Link className='font-bold text-lg' to="/contact">Contact</Link>
     </li>
 
-
+    <li tabIndex={0}>
+      <Link className='font-bold text-lg' to="/beDoctor">Be a Doctor</Link>
+    </li>
 
 
 

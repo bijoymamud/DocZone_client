@@ -2,6 +2,7 @@ import {
   createBrowserRouter
 } from "react-router-dom";
 import Main from "../Layout/Main";
+import BeDoctor from "../Pages/BeDoctor/BeDoctor";
 import FindDoc from "../Pages/FindDoctor/FindDoc";
 import Contact from "../Pages/Home/Contact/Contact";
 import Home from "../Pages/Home/Homepage/Home";
@@ -36,6 +37,11 @@ export const router = createBrowserRouter([
         path: '/findDoc',
         element: <FindDoc />
       },
+      {
+        path: '/beDoctor',
+        element: <PrivateRoute><BeDoctor /></PrivateRoute>
+      },
+
 
       {
         path: "/singleDoc/:id",
