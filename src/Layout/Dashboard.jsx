@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaHome, FaPhoneAlt, FaSearch, FaWallet } from "react-icons/fa";
 import { FaAddressBook, FaFilePen } from 'react-icons/fa6';
 import { Link, Outlet } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../providers/AuthProvider';
 
 const Dashboard = () => {
+
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Log Out Successful',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      })
+      .catch(error => console.log(error))
+  }
+
   return (
     <section className='container mx-auto'>
       <div className="drawer lg:drawer-open">
@@ -26,7 +44,38 @@ const Dashboard = () => {
             <li><Link to="/findDoc"><FaSearch />Find Doctor</Link></li>
             <li><Link to="/contact"><FaPhoneAlt />Contact</Link></li>
 
+
+
+
+
+
+
+            <div className='absolute flex items-center space-x-4 mt-28 bottom-5 p-2'>
+              <div className='avatar w-10 h-10'>
+                <img
+                  src={user?.photoURL}
+                  alt=''
+                  className='rounded-full '
+                />
+              </div>
+              <div className={`${!open && 'hidden'} origin-left duration-200`}>
+                <h2 className='text-sm font-semibold'>{user?.displayName}</h2>
+                <span className='flex items-center space-x-1'>
+                  <a
+                    onClick={handleLogout}
+                    rel='noopener noreferrer'
+                    href='#'
+                    className='text-xs hover:underline'
+                  >
+                    Logout
+                  </a>
+                </span>
+              </div>
+            </div>
+
           </ul>
+
+
 
         </div>
       </div>

@@ -190,7 +190,7 @@ const Register = () => {
                 />
               </div>
               <div className='mt-5 form-control '>
-                <button className='btn  btn-primary'>Registration</button>
+                <button className='btn text-white btn-primary'>Registration</button>
               </div>
             </form>
             <div className="flex items-center pt-4 space-x-1" bis_skin_checked="1">

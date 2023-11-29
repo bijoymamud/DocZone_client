@@ -8,9 +8,18 @@ import { AuthContext } from '../../providers/AuthProvider';
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signIn } = useContext(AuthContext);
+  const { signIn, setUser, GoogleSignIn } = useContext(AuthContext);
 
   const from = location.state?.from?.pathname || "/";
+
+
+  const handleGoogleLogin = () => {
+    GoogleSignIn()
+      .then(result => navigate(from, {
+        replace: true
+      }))
+      .catch(error => console.log(error.message))
+  }
 
   const handleLogIn = (event) => {
     event.preventDefault();
@@ -23,6 +32,8 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         console.log(user);
+        setUser(user);
+
         Swal.fire({
           position: "center",
           icon: "success",
@@ -31,6 +42,9 @@ const Login = () => {
           timer: 1500
         });
         navigate(from, { replace: true });
+      })
+      .catch(error => {
+        setError("Incorrect Password");
       })
   }
 
@@ -55,7 +69,7 @@ const Login = () => {
               <a rel="noopener noreferrer" href="#">Forgot Password?</a>
             </div>
           </div>
-          <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">Sign in</button>
+          <button className="block w-full  p-3 text-center rounded-sm dark:text-white dark:bg-violet-500 hover:text-white hover:bg-violet-600">Sign in</button>
         </form>
         <div className="flex items-center pt-4 space-x-1" bis_skin_checked="1">
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700" bis_skin_checked="1"></div>
@@ -63,7 +77,7 @@ const Login = () => {
           <div className="flex-1 h-px sm:w-16 bg-gray-700" bis_skin_checked="1"></div>
         </div>
         <div className="flex justify-center space-x-4" bis_skin_checked="1">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
+          <button onClick={() => handleGoogleLogin()} aria-label="Log in with Google" className="p-3 rounded-sm">
             <FcGoogle className='text-gray-400 text-3xl' />
           </button>
 

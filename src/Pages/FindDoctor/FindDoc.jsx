@@ -6,7 +6,7 @@ const FindDoc = () => {
   const [findDoctors, setfindDoctors] = useState([]);
 
   useEffect(() => {
-    fetch("../../../public/findDoc.json")
+    fetch("http://localhost:5000/doctor")
       .then(res => res.json())
       .then(data => setfindDoctors(data))
   }, [])
@@ -16,7 +16,11 @@ const FindDoc = () => {
   return (
     <div className='container  md:my-20'>
       <h2 className='text-center text-3xl font-extrabold'>Our Doctors</h2>
-      <div className='grid md:grid-cols-3 gap-16 md:py-20'>
+
+      <p className='w-2/6 text-center md:mt-5 mx-auto text-gray-500'>Discovering Wellness, One Doctor at a Time: Find Your Perfect Partner in Health with Our Great Doctors.</p>
+
+
+      <div className='grid md:grid-cols-3 ms-10 gap-16 md:py-20'>
         {
           findDoctors.map((findDoctor) => <FindSingleDoc key={findDoctor.id}
             findDoctor={findDoctor}

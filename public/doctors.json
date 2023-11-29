@@ -43,9 +43,460 @@
       }
     ]
   },
+
+  {
+    "id": "18746485889",
+    "name": "Dr. Olivia Ramirez",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://www.shutterstock.com/image-photo/studio-portrait-smiling-female-doctor-600nw-2196569245.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485888",
+    "name": "Dr. Samuel Foster",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://img.freepik.com/premium-photo/doctor-with-beard-stethoscope-around-his-neck-smiles-camera_889227-23129.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485887",
+    "name": "Dr. Isabella Chang",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://media.istockphoto.com/id/1266812094/photo/portrait-of-adult-female-doctor-sitting-at-desk-in-office-clinic.jpg?s=612x612&w=0&k=20&c=0XtLFYVuO32rW1KVEYoyA5XzARjDfMf5eJYPZmy-J_0=",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485886",
+    "name": "Dr. Jackson Monroe",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://img.freepik.com/premium-photo/portrait-serious-male-doctor-with-stethoscope-looking-camera-generative-ai_634053-7334.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485885",
+    "name": "Dr. Gabrielle Taylor",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://img.freepik.com/premium-photo/portrait-young-male-doctor-inside-hospital-generative-ai_78895-2980.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485884",
+    "name": "Dr. Lily Anderson",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://img.freepik.com/free-photo/portrait-doctor_144627-39389.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485883",
+    "name": "Dr. Ethan Reynolds",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://img.freepik.com/premium-photo/photo-young-handsome-physician-medical-robe-with-stethoscope_824239-100.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "1874648588123",
+    "name": "Dr. Marcus Bennett",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://img.freepik.com/premium-photo/photo-young-handsome-physician-medical-robe-with-stethoscope_824239-101.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485882",
+    "name": "Dr. Sophia Rodriguez",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://img.freepik.com/premium-photo/female-doctor-pharmacist-working_972478-364.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
+  {
+    "id": "18746485881234",
+    "name": "Dr. Ava Mitchell",
+    "specialty": "Dermatologist",
+    "visitPrice": "500 BDT",
+    "avgRating": 4.8,
+    "totalRating": 120,
+    "visitingHours": [
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "5:00 PM - 8:00 PM"
+      }
+    ],
+    "img": "https://st4.depositphotos.com/4218696/30859/i/450/depositphotos_308590852-stock-photo-cheerful-doctor-standing-crossing-hands.jpg",
+    "totalPatients": 3000,
+    "hospital": "St. Mary's Hospital",
+    "educationalInfo": [
+      {
+        "degree": "Doctor of Medicine (M.D.)",
+        "yearCompleted": "23 February 2012",
+        "institution": "University of Health Sciences"
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "yearCompleted": "17 August 2008",
+        "institution": "State College of Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Cardiologist",
+        "hospital": "St. Mary's Hospital",
+        "from": "Jan 01, 2005 - Fab 05, 2009"
+      }
+    ]
+  },
+
   {
     "id": "25845874754",
-    "name": "Dr. Sarah Johnson",
+    "name": "Dr. Victor Sterling",
     "specialty": "Dermatologist",
     "visitPrice": "1500 BDT",
     "avgRating": 4.9,

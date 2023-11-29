@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/findDoc',
-        element: <FindDoc />
+        element: <FindDoc />,
       },
       {
         path: '/beDoctor',
@@ -69,7 +69,7 @@ export const router = createBrowserRouter([
 
   {
     path: '/dashboard',
-    element: <Dashboard />,
+    element: <PrivateRoute><Dashboard /></PrivateRoute>,
     children: [
       {
         path: 'myAppointments',

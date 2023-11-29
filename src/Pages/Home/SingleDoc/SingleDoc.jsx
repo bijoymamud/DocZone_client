@@ -10,12 +10,12 @@ const SingleDoc = ({ doctor }) => {
   return (
     <section className=''>
       <div className="card card-compact shadow-none w-5/6 mx-auto bg-base-100 ">
-        <figure><img className='w-full' src={img} alt="Shoes" /></figure>
+        <figure><img className='w-[364px] h-[364px]' src={img} alt="Shoes" /></figure>
         <div className="">
           <h2 className="card-title py-4">{name}</h2>
 
           <div className="card-actions flex items-center justify-between mb-2">
-            <button className="btn btn-sm mb-2 hover:bg-sky-200 bg-sky-200">{specialty}</button>
+            <button className="btn btn-sm mb-2 hover:bg-sky-300 bg-sky-200">{specialty}</button>
             <div  >
               <p className='flex items-center justify-between gap-2'><FaStar className='text-yellow-500' /> {avgRating} <span className='text-gray-500'>({totalRating})</span></p>
             </div>

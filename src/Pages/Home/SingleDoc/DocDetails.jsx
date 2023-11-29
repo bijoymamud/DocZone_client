@@ -1,15 +1,54 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaStar } from "react-icons/fa";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import docDetails from "../../../../public/doctors.json";
-const DocDetails = () => {
+import { AuthContext } from '../../../providers/AuthProvider';
 
+
+const DocDetails = () => {
+  const { user } = useContext(AuthContext)
+  const nevigate = useNavigate();
   const { id } = useParams();
   console.log(id);
 
   const info = docDetails.find((detail) => detail.id == id)
+
+  // const handleAddToDash = item => {
+
+  //   if (user) {
+  //     fetch('http://localhost:5000/appoinment')
+  //       .then(res => res.json())
+  //       .then(data => {
+  //         if (data.insertedId) {
+
+  //           Swal.fire({
+  //             position: "top-end",
+  //             icon: "success",
+  //             title: "Your work has been saved",
+  //             showConfirmButton: false,
+  //             timer: 1500
+  //           });
+  //         }
+  //       })
+  //   }
+  //   else {
+  //     Swal.fire({
+  //       title: "Please login!",
+
+  //       icon: "warning",
+  //       showCancelButton: true,
+  //       confirmButtonColor: "#3085d6",
+  //       cancelButtonColor: "#d33",
+  //       confirmButtonText: "Login Now!"
+  //     }).then((result) => {
+  //       if (result.isConfirmed) {
+  //         nevigate('/login')
+  //       }
+  //     });
+  //   }
+  // }
 
   return (
     <section className='container w-4/6 md:py-32
@@ -130,7 +169,7 @@ const DocDetails = () => {
 
             </div>
             <div className='text-center'>
-              <button className='bg-primary text-white btn btn-wide mt-5 hover:bg-green-600 hover:text-white'>BOOK APPOINMENT</button>
+              <button onClick={() => handleAddToDash(item)} className='bg-primary text-white btn btn-wide mt-5 hover:bg-green-600 hover:text-white'>BOOK APPOINMENT</button>
             </div>
           </div>
         </div>
