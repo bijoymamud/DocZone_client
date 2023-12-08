@@ -15,9 +15,14 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     GoogleSignIn()
-      .then(result => navigate(from, {
-        replace: true
-      }))
+      .then(result => {
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+
+        navigate(from, {
+          replace: true
+        })
+      })
       .catch(error => console.log(error.message))
   }
 

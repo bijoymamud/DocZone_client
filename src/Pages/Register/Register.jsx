@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -19,8 +19,32 @@ const Register = () => {
 
   const password = watch('password');
 
-  const { createUser, updateUserProfile } = useContext(AuthContext)
+  const { createUser, updateUserProfile, GoogleSignIn } = useContext(AuthContext)
   const navigate = useNavigate();
+
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
+  const handleGoogleLogin = () => {
+    GoogleSignIn()
+      .then(result => {
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
+        fetch('http://localhost:5000/users', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(saveUser)
+        })
+          .then(res => res.json())
+          .then(() => {
+            navigate(from, { replace: true });
+          })
+      })
+  }
 
   const onSubmit = data => {
     console.log(data);
@@ -29,29 +53,37 @@ const Register = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
 
-        updateUserProfile(data.name, data.photo)
+        updateUserProfile(data.name, data.photoURL)
           .then(() => {
-            console.log('profile updated');
-            reset()
+            const saveUser = { name: data.name, email: data.email }
+            fetch('http://localhost:5000/users', {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json'
+              },
+              body: JSON.stringify(saveUser)
+            })
+              .then(res => res.json())
+              .then(data => {
+                if (data.insertedId) {
+                  reset();
+                  Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'User created successfully.',
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+                  navigate('/');
+                }
+              })
 
-
-            Swal.fire({
-              position: "center",
-              icon: "success",
-              title: "User Registered",
-              showConfirmButton: false,
-              timer: 1500
-            });
-            navigate('/')
 
 
           })
           .catch(error => console.log(error))
       })
-
-
-
-  }
+  };
 
   return (
 
@@ -163,8 +195,8 @@ const Register = () => {
                   </label>
 
                   <input
-                    {...register('photo', { required: true })}
-                    name='photo'
+                    {...register('photoURL', { required: true })}
+
                     type='text'
                     placeholder='Image URL'
                     className=' dark:bg-gray-900 text-white input input-bordered'
@@ -199,7 +231,7 @@ const Register = () => {
               <div className="flex-1 h-px sm:w-16 bg-gray-700" bis_skin_checked="1"></div>
             </div>
             <div className="flex justify-center space-x-4" bis_skin_checked="1">
-              <button aria-label="Log in with Google" className="p-3 rounded-sm">
+              <button onClick={() => handleGoogleLogin()} aria-label="Log in with Google" className="p-3 rounded-sm">
                 <FcGoogle className='text-gray-400 text-3xl' />
               </button>
 
