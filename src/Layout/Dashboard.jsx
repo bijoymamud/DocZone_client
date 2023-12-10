@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { FaHome, FaPhoneAlt, FaSearch, FaWallet } from "react-icons/fa";
 import { FaAddressBook, FaFilePen } from 'react-icons/fa6';
+import { TbUsersPlus } from "react-icons/tb";
 import { Link, Outlet } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../providers/AuthProvider';
@@ -22,6 +23,12 @@ const Dashboard = () => {
       .catch(error => console.log(error))
   }
 
+
+  //TODO: load data from server for isAdmin
+
+  const isAdmin = true;
+
+
   return (
     <section className='container mx-auto'>
       <div className="drawer lg:drawer-open">
@@ -34,15 +41,33 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            {/* Sidebar content here */}
-            <li><Link><FaAddressBook />My Appoinments</Link></li>
-            <li><Link className='mt-1'><FaWallet />Payment</Link></li>
-            <li><Link className='mt-1'><FaFilePen />Review</Link></li>
 
-            <div className="divider"></div>
-            <li><Link to="/"><FaHome />Home</Link></li>
-            <li><Link to="/findDoc"><FaSearch />Find Doctor</Link></li>
-            <li><Link to="/contact"><FaPhoneAlt />Contact</Link></li>
+
+            {
+              isAdmin ? <>
+                <li><Link to='/dashboard/manageUser' ><FaAddressBook />Manage Users</Link></li>
+                <li><Link to='/dashboard/appliedDoctor' className='mt-1'><FaWallet />Applied Doctor</Link></li>
+                <li><Link to='/dashboard/addDoctor' className='mt-1'><TbUsersPlus className='font-extrabold text-lg' />Add Doctor</Link></li>
+
+
+                <div className="divider"></div>
+                <li><Link to="/"><FaHome />Home</Link></li>
+                <li><Link to="/findDoc"><FaSearch />Find Doctor</Link></li>
+                <li><Link to="/contact"><FaPhoneAlt />Contact</Link></li>
+
+              </> : <>
+                <li><Link to='/dashboard/myAppointments'><FaAddressBook />My Appoinments</Link></li>
+                <li><Link to='/dashboard/payment' className='mt-1'><FaWallet />Payment</Link></li>
+                <li><Link to='/dashboard/addReviews' className='mt-1'><FaFilePen />Review</Link></li>
+
+                <div className="divider"></div>
+                <li><Link to="/"><FaHome />Home</Link></li>
+                <li><Link to="/findDoc"><FaSearch />Find Doctor</Link></li>
+                <li><Link to="/contact"><FaPhoneAlt />Contact</Link></li>
+              </>
+            }
+            {/* Sidebar content here */}
+
 
 
 

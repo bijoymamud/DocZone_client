@@ -4,7 +4,12 @@ import {
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import BeDoctor from "../Pages/BeDoctor/BeDoctor";
+import AddDoctor from "../Pages/Dashboard/AddDoctor/AddDoctor";
+import AppliedDoctor from "../Pages/Dashboard/AppliedDoctor/AppliedDoctor";
+import ManageUser from "../Pages/Dashboard/ManageUser/ManageUser";
 import MyAppoinments from "../Pages/Dashboard/MyAppoinments/MyAppoinments";
+import Payment from "../Pages/Dashboard/Payment/Payment";
+import AddReview from "../Pages/Dashboard/Review/AddReview";
 import FindDoc from "../Pages/FindDoctor/FindDoc";
 import Contact from "../Pages/Home/Contact/Contact";
 import Home from "../Pages/Home/Homepage/Home";
@@ -68,13 +73,40 @@ export const router = createBrowserRouter([
   // },
 
   {
-    path: '/dashboard',
+    path: 'dashboard',
     element: <PrivateRoute><Dashboard /></PrivateRoute>,
     children: [
+
       {
         path: 'myAppointments',
         element: <MyAppoinments />
+      },
+
+      {
+        path: 'manageUser',
+        element: <ManageUser></ManageUser>
+      },
+
+      {
+        path: 'appliedDoctor',
+        element: <AppliedDoctor />
+      },
+      {
+        path: 'addDoctor',
+        element: <AddDoctor />
+      },
+      {
+        path: 'payment',
+        element: <Payment />
+      },
+      {
+        path: 'addReviews',
+        element: <AddReview />
       }
+
+
+
+
     ]
   },
 ]);

@@ -15,7 +15,7 @@ const Navbar = () => {
       .catch(error => console.log(error))
   }
 
-
+  // const isAdmin = false;
 
   const navItems = <>
 
@@ -89,7 +89,18 @@ const Navbar = () => {
             </label>
             <ul tabIndex={0} className="dropdown-content 
              menu p-2 shadow bg-yellow-50 rounded w-48">
-              <li><Link to='/dashboard/myAppointments'>Dashboard</Link></li>
+
+              <li><Link to='dashboard
+              '>Dashboard</Link></li>
+              {/* {
+                isAdmin ? <>
+                  <li><Link to='dashboard/manageUser
+              '>Dashboard</Link></li></> : <>
+                  <li><Link to='dashboard/myAppointments
+              '>Dashboard</Link></li></>
+              } */}
+              {/* <li><Link to='dashboard
+              '>Dashboard</Link></li> */}
               <li className="mt-1"><Link>Profile</Link></li>
             </ul>
           </div>
@@ -104,7 +115,7 @@ const Navbar = () => {
         </div>
 
       </div>
-    </div>
+    </div >
   );
 };
 
