@@ -5,15 +5,26 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import docDetails from "../../../../public/doctors.json";
 import { AuthContext } from '../../../providers/AuthProvider';
+import { BookingContext } from '../../../providers/BookingProvider';
 
 
 const DocDetails = () => {
   const { user } = useContext(AuthContext)
+  const { handleBooking, booking } = useContext(BookingContext);
   const nevigate = useNavigate();
   const { id } = useParams();
   console.log(id);
 
   const info = docDetails.find((detail) => detail.id == id)
+
+  const handleAddBooking = info => {
+
+
+    const booking = { name: info?.name, specialty: info?.specialty, id: id }
+    handleBooking(booking);
+
+
+  }
 
   // const handleAddToDash = item => {
 
@@ -169,7 +180,7 @@ const DocDetails = () => {
 
             </div>
             <div className='text-center'>
-              <button onClick={() => handleAddToDash(item)} className='bg-primary text-white btn btn-wide mt-5 hover:bg-green-600 hover:text-white'>BOOK APPOINMENT</button>
+              <button onClick={() => handleAddBooking(info)} className='bg-primary text-white btn btn-wide mt-5 hover:bg-green-600 hover:text-white'>BOOK APPOINMENT</button>
             </div>
           </div>
         </div>

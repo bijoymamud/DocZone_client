@@ -5,10 +5,13 @@ import { TbUsersPlus } from "react-icons/tb";
 import { Link, Outlet } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../providers/AuthProvider';
+import { BookingContext } from '../providers/BookingProvider';
 
 const Dashboard = () => {
 
   const { user, logOut } = useContext(AuthContext);
+  const { booking } = useContext(BookingContext);
+  console.log(booking);
 
   const handleLogout = () => {
     logOut()
@@ -26,7 +29,7 @@ const Dashboard = () => {
 
   //TODO: load data from server for isAdmin
 
-  const isAdmin = true;
+  const isAdmin = false;
 
 
   return (

@@ -8,13 +8,25 @@ import {
 import { router } from './Routes/routers';
 import AuthProvider from './providers/AuthProvider';
 
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
+import BookingProvider from './providers/BookingProvider';
+
+const queryClient = new QueryClient()
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <AuthProvider>
-    <div className='md:max-w-8xl mx-auto'>
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
-    </div>
+    <BookingProvider>
+      <QueryClientProvider client={queryClient}>
+        <div className='md:max-w-8xl mx-auto'>
+          <React.StrictMode>
+            <RouterProvider router={router} />
+          </React.StrictMode>
+        </div>
+      </QueryClientProvider>
+    </BookingProvider>
   </AuthProvider>
 )
