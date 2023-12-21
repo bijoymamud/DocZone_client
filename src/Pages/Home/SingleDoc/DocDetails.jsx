@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { useNavigate, useParams } from 'react-router-dom';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Swal from 'sweetalert2';
 import docDetails from "../../../../public/doctors.json";
 import { AuthContext } from '../../../providers/AuthProvider';
 import { BookingContext } from '../../../providers/BookingProvider';
@@ -17,48 +18,58 @@ const DocDetails = () => {
 
   const info = docDetails.find((detail) => detail.id == id)
 
+
   const handleAddBooking = info => {
 
 
-    const booking = { name: info?.name, specialty: info?.specialty, id: id }
+    const booking = { name: info?.name, specialty: info?.specialty, id: id, email: user.email }
     handleBooking(booking);
+
+
+    if (user) {
+      fetch('http://localhost:5000/appoinment', {
+        method: "POST",
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(booking)
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.data.insertedId) {
+
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Your work has been saved",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        })
+    }
+    else {
+      Swal.fire({
+        title: "Please login!",
+
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Login Now!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          nevigate('/login')
+        }
+      });
+    }
 
 
   }
 
   // const handleAddToDash = item => {
 
-  //   if (user) {
-  //     fetch('http://localhost:5000/appoinment')
-  //       .then(res => res.json())
-  //       .then(data => {
-  //         if (data.insertedId) {
 
-  //           Swal.fire({
-  //             position: "top-end",
-  //             icon: "success",
-  //             title: "Your work has been saved",
-  //             showConfirmButton: false,
-  //             timer: 1500
-  //           });
-  //         }
-  //       })
-  //   }
-  //   else {
-  //     Swal.fire({
-  //       title: "Please login!",
-
-  //       icon: "warning",
-  //       showCancelButton: true,
-  //       confirmButtonColor: "#3085d6",
-  //       cancelButtonColor: "#d33",
-  //       confirmButtonText: "Login Now!"
-  //     }).then((result) => {
-  //       if (result.isConfirmed) {
-  //         nevigate('/login')
-  //       }
-  //     });
-  //   }
   // }
 
   return (

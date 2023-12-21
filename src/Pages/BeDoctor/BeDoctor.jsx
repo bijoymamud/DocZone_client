@@ -13,22 +13,75 @@ const BeDoctor = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      // Make a POST request to your server endpoint
+      const response = await fetch('http://localhost:5000/beDoctor', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    toast.success('Submitted Successfully', {
+      // Check if the request was successful (status code 2xx)
+      if (response.ok) {
+        console.log('Submission successful');
+        toast.success('Submitted Successfully', {
+          position: 'bottom-center',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+        });
+      } else {
+        // Handle the case where the server returns an error
+        console.error('Submission failed');
+        toast.error('Submission Failed', {
+          position: 'bottom-center',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form', error);
+      toast.error('Error submitting form', {
+        position: 'bottom-center',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      });
+    }
+  };
 
-      position: "bottom-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+  // const onSubmit = (data) => {
+  //   console.log(data);
 
-  }
+  //   // toast.success('Submitted Successfully', {
+
+  //   //   position: "bottom-center",
+  //   //   autoClose: 3000,
+  //   //   hideProgressBar: false,
+  //   //   closeOnClick: true,
+  //   //   pauseOnHover: true,
+  //   //   draggable: true,
+  //   //   progress: undefined,
+  //   //   theme: "dark",
+  //   // });
+
+  // }
 
   return (
     <div>

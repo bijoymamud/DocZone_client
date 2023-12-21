@@ -32,21 +32,15 @@ export const router = createBrowserRouter([
         path: '/contact',
         element: <Contact />
       },
-      {
-        path: '/login',
-        element: <Login />
-      },
-      {
-        path: '/register',
-        element: <Register />
-      },
+
+
       {
         path: '/findDoc',
         element: <FindDoc />,
       },
       {
         path: '/beDoctor',
-        element: <PrivateRoute><BeDoctor /></PrivateRoute>
+        element: <BeDoctor />
       },
 
 
@@ -59,28 +53,26 @@ export const router = createBrowserRouter([
       },
     ]
 
+
   },
 
-  // {
-  //   path: '/dashboard',
-  //   element: <Dashboard />,
-  //   children: [
-  //     {
-  //       path: 'myAppointments',
-  //       element: <MyAppoinments />
-  //     }
-  //   ]
-  // },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/register',
+    element: <Register />
+  },
+
+
 
   {
     path: '/dashboard',
     element: <PrivateRoute><Dashboard /></PrivateRoute>,
     children: [
 
-      {
-        path: '/dashboard',
-        element: <h1>Hi</h1>
-      },
+
       {
         path: 'myAppointments',
         element: <MyAppoinments />

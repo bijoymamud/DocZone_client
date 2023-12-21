@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { FaHome, FaPhoneAlt, FaSearch, FaWallet } from "react-icons/fa";
 import { FaAddressBook, FaFilePen } from 'react-icons/fa6';
 import { TbUsersPlus } from "react-icons/tb";
-import { Link, Outlet } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import { Link, Outlet, useLocation } from 'react-router-dom';
+import useAdmin from '../hooks/useAdmin';
 import { AuthContext } from '../providers/AuthProvider';
 import { BookingContext } from '../providers/BookingProvider';
 
@@ -13,24 +13,28 @@ const Dashboard = () => {
   const { booking } = useContext(BookingContext);
   console.log(booking);
 
-  const handleLogout = () => {
-    logOut()
-      .then(() => {
-        Swal.fire({
-          icon: 'success',
-          title: 'Log Out Successful',
-          showConfirmButton: false,
-          timer: 1500
-        })
-      })
-      .catch(error => console.log(error))
-  }
+  const location = useLocation();
+
+  // const handleLogout = () => {
+  //   logOut()
+  //     .then(() => {
+  //       Swal.fire({
+  //         icon: 'success',
+  //         title: 'Log Out Successful',
+  //         showConfirmButton: false,
+  //         timer: 1500
+  //       })
+
+  //     })
+  //     .catch(error => console.log(error))
+
+  // }
 
 
   //TODO: load data from server for isAdmin
 
-  const isAdmin = false;
-
+  // const isAdmin = true;
+  const [isAdmin] = useAdmin()
 
   return (
     <section className='container mx-auto'>
@@ -89,14 +93,14 @@ const Dashboard = () => {
               <div className={`${!open && 'hidden'} origin-left duration-200`}>
                 <h2 className='text-sm font-semibold'>{user?.displayName}</h2>
                 <span className='flex items-center space-x-1'>
-                  <a
-                    onClick={handleLogout}
+                  {/* <a
+
                     rel='noopener noreferrer'
-                    href='#'
+
                     className='text-xs hover:underline'
                   >
                     Logout
-                  </a>
+                  </a> */}
                 </span>
               </div>
             </div>

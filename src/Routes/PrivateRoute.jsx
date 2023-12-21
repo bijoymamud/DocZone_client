@@ -4,21 +4,42 @@ import { AuthContext } from '../providers/AuthProvider';
 
 const PrivateRoute = ({ children }) => {
 
+  // const { user, loading } = useContext(AuthContext);
+  // const location = useLocation();
+
+
+  // if (loading) {
+  //   return <div className='container text-center md:mt-52 md:pb-80'>
+  //     <span className="loading loading-bars  loading-lg"></span>
+  //   </div>
+
+  // }
+
+  // if (user) {
+  //   return children;
+  // } else {
+  //   return <Navigate to='/login' state={{ from: location }} replace></Navigate>
+  // }
   const { user, loading } = useContext(AuthContext);
+
   const location = useLocation();
 
-
   if (loading) {
-    return <div className='container text-center md:mt-52 md:pb-80'>
-      <span className="loading loading-bars  loading-lg"></span>
-    </div>
-
+    return (
+      <div className="flex justify-center items-center m-32 md:m-96">
+        <span className="loading loading-bars loading-lg"></span>
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
   }
-
   if (user) {
     return children;
+  } else {
+    return <Navigate to="/login" state={{ from: location }}></Navigate>;
   }
-  return <Navigate to='/login' state={{ from: location }} replace></Navigate>
+
+
+
 };
 
 export default PrivateRoute;
