@@ -13,6 +13,8 @@ import AddReview from "../Pages/Dashboard/Review/AddReview";
 import FindDoc from "../Pages/FindDoctor/FindDoc";
 import Contact from "../Pages/Home/Contact/Contact";
 import Home from "../Pages/Home/Homepage/Home";
+// import DocDetails from "../Pages/Home/SingleDoc/DocDetails";
+import DetailsLayout from "../Layout/DetailsLayout/DetailsLayout";
 import DocDetails from "../Pages/Home/SingleDoc/DocDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
@@ -45,12 +47,7 @@ export const router = createBrowserRouter([
 
 
 
-      {
-        path: "/singleDoc/:id",
-        element: <PrivateRoute><DocDetails /></PrivateRoute>,
 
-
-      },
     ]
 
 
@@ -63,6 +60,20 @@ export const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register />
+  },
+
+  {
+    path: 'doctor',
+    element: <PrivateRoute><DetailsLayout /></PrivateRoute>,
+    children: [
+      {
+        path: ':id',
+        element: <DocDetails />,
+        loader: ({ params }) => fetch(`http://localhost:5000/doctor/${params.id}`)
+      }
+    ]
+
+
   },
 
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const SingleDoc = ({ doctor }) => {
 
-  const { id, name, specialty, avgRating, totalRating, img, totalPatients, hospital, experience } = doctor;
+  const { _id, name, specialty, avgRating, totalRating, img, totalPatients, hospital, experience } = doctor;
 
 
   return (
@@ -26,7 +26,7 @@ const SingleDoc = ({ doctor }) => {
               <p className='font-extrabold' >+{totalPatients} patients</p>
               <small className='text-gray-500'>{hospital}</small>
             </div>
-            <Link to={`/singleDoc/${id}`}>
+            <Link to={`/doctor/${_id}`}>
               <FaArrowCircleRight className='text-xl' />
             </Link>
           </div>

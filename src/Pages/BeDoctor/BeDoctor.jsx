@@ -108,28 +108,28 @@ const BeDoctor = () => {
                     <div className='grid-cols-2 gap-3 md:grid'>
                       <div className='form-control'>
                         <label className='label'>
-                          <span className='label-text dark:text-gray-400'>First Name</span>
+                          <span className='label-text dark:text-gray-400'>Name</span>
                         </label>
                         <input
-                          {...register('firstName', { required: true })}
+                          {...register('name', { required: true })}
                           type='text'
                           placeholder='Enter First Name'
                           className=' dark:bg-gray-900 text-white input input-bordered'
                         />
-                        {errors.firstName && <span>This field is required</span>}
+                        {errors.name && <span>This field is required</span>}
                       </div>
 
                       <div className='form-control'>
                         <label className='label'>
-                          <span className='label-text dark:text-gray-400'>Last Name</span>
+                          <span className='label-text dark:text-gray-400'>Specialty</span>
                         </label>
                         <input
-                          {...register('lastName', { required: true })}
+                          {...register('specialty', { required: true })}
                           type='text'
-                          placeholder='Enter Last Name'
+                          placeholder='Enter Specialty'
                           className=' dark:bg-gray-900 text-white input input-bordered'
                         />
-                        {errors.lastName && <span>This field is required</span>}
+                        {errors.specialty && <span>This field is required</span>}
                       </div>
 
 

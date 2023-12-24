@@ -1,6 +1,5 @@
 [
   {
-    "id": "18746485887",
     "name": "Dr. John Smith",
     "specialty": "Cardiologist",
     "visitPrice": "500 BDT",
@@ -45,7 +44,6 @@
   },
 
   {
-    "id": "18746485889",
     "name": "Dr. Olivia Ramirez",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -90,7 +88,6 @@
   },
 
   {
-    "id": "18746485888",
     "name": "Dr. Samuel Foster",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -135,7 +132,6 @@
   },
 
   {
-    "id": "18746485887",
     "name": "Dr. Isabella Chang",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -180,7 +176,6 @@
   },
 
   {
-    "id": "18746485886",
     "name": "Dr. Jackson Monroe",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -225,7 +220,6 @@
   },
 
   {
-    "id": "18746485885",
     "name": "Dr. Gabrielle Taylor",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -270,7 +264,6 @@
   },
 
   {
-    "id": "18746485884",
     "name": "Dr. Lily Anderson",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -315,7 +308,6 @@
   },
 
   {
-    "id": "18746485883",
     "name": "Dr. Ethan Reynolds",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -360,7 +352,6 @@
   },
 
   {
-    "id": "1874648588123",
     "name": "Dr. Marcus Bennett",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -405,7 +396,6 @@
   },
 
   {
-    "id": "18746485882",
     "name": "Dr. Sophia Rodriguez",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -450,7 +440,6 @@
   },
 
   {
-    "id": "18746485881234",
     "name": "Dr. Ava Mitchell",
     "specialty": "Dermatologist",
     "visitPrice": "500 BDT",
@@ -495,7 +484,6 @@
   },
 
   {
-    "id": "25845874754",
     "name": "Dr. Victor Sterling",
     "specialty": "Dermatologist",
     "visitPrice": "1500 BDT",
@@ -539,7 +527,6 @@
     ]
   },
   {
-    "id": "3857878745",
     "name": "Dr. Michael Lee",
     "specialty": "Pediatrician",
     "visitPrice": "1300 BDT",
