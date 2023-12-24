@@ -35,7 +35,7 @@ const DocDetails = () => {
 
 
     if (user) {
-      fetch('http://localhost:5000/appoinment', {
+      fetch(' https://doctor-appoinment-server-nine.vercel.app/appoinment', {
         method: "POST",
         headers: {
           'content-type': 'application/json'
