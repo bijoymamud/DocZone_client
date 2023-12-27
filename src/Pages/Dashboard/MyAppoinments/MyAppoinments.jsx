@@ -23,6 +23,8 @@ const MyAppoinments = () => {
                   <th></th>
                   <th>Name</th>
                   <th>Category</th>
+                  <th>Price</th>
+                  <th>Payment</th>
 
                 </tr>
               </thead>
@@ -32,6 +34,10 @@ const MyAppoinments = () => {
                     <th>{index + 1}</th>
                     <td>{bookings.name}</td>
                     <td>{bookings.specialty}</td>
+                    <td>{bookings.price}</td>
+                    <td>
+                      <button className='btn btn-sm'>Pay</button>
+                    </td>
 
 
                   </tr>

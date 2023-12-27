@@ -30,7 +30,7 @@ const DocDetails = () => {
   const handleAddBooking = info => {
 
 
-    const booking = { name: info?.name, specialty: info?.specialty, id: id, email: user.email }
+    const booking = { name: info?.name, price: info?.visitPrice, specialty: info?.specialty, id: id, email: user.email, }
     handleBooking(booking);
 
 
