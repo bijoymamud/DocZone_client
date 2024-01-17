@@ -13,7 +13,8 @@ import { BookingContext } from '../../../providers/BookingProvider';
 const DocDetails = () => {
 
 
-  const { user } = useContext(AuthContext)
+  const { user, loading } = useContext(AuthContext);
+  console.log(loading, user);
   const { handleBooking, booking } = useContext(BookingContext);
   const nevigate = useNavigate();
   const { id } = useParams();
@@ -22,7 +23,7 @@ const DocDetails = () => {
 
   const docInfoView = useLoaderData();
 
-  const { img, name, specialty, avgRating, totalRating, visitPrice } = docInfoView;
+  const { _id, img, name, specialty, avgRating, totalRating, visitPrice } = docInfoView;
 
   // const info = docDetails.find((detail) => detail.id == id)
   // const informationDoc = docInfoView.informations.map(info => info)
@@ -30,13 +31,13 @@ const DocDetails = () => {
   const handleAddBooking = info => {
 
 
-    const booking = { name: info?.name, price: info?.visitPrice, specialty: info?.specialty, id: id, email: user.email, }
+    const booking = { name: info?.name, price: info?.visitPrice, specialty: info?.specialty, id: _id, email: user.email, }
     handleBooking(booking);
 
 
     if (user) {
       fetch(' https://doctor-appoinment-server-nine.vercel.app/appoinment', {
-        method: "POST",
+      method: "POST",
         headers: {
           'content-type': 'application/json'
         },
@@ -47,9 +48,9 @@ const DocDetails = () => {
           if (data.insertedId) {
 
             Swal.fire({
-              position: "top-end",
+              position: "center",
               icon: "success",
-              title: "Your work has been saved",
+              title: "Your appoinment Booked",
               showConfirmButton: false,
               timer: 1500
             });
@@ -166,12 +167,12 @@ const DocDetails = () => {
               </div>
 
 
-              <div className='w-full'>
+              {/* <div className='w-full'>
                 <TabPanel>
                   <h2>Feedback content</h2>
                   <p>Content will run from backend</p>
                 </TabPanel>
-              </div>
+              </div> */}
 
             </Tabs>
           </div >
@@ -183,7 +184,7 @@ const DocDetails = () => {
           <div className=' p-5 shadow-xl rounded-md'>
             <div className=' flex items-center justify-between gap-20'>
               <h1 className='text-gray-600 font-semibold'>Ticket Price</h1>
-              <h1 className='font-extrabold  card-title'>{visitPrice}</h1>
+              <h1 className='font-extrabold  card-title'>{visitPrice} <span className='font-normal'>BDT</span> </h1>
             </div>
 
             <div >

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword,  getAuth,  onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { app } from '../firebase/firebase.config';
 
@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
 
-    const unSubscribe = onAuthStateChanged(auth, currentUser => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       console.log('current User', currentUser);
 
@@ -81,7 +81,8 @@ const AuthProvider = ({ children }) => {
     logOut,
     updateUserProfile,
     GoogleSignIn,
-    setUser
+    setUser,
+
   }
 
 

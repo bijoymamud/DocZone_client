@@ -49,7 +49,8 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch(error => {
-        setError("Incorrect Password");
+        console.log("Incorrect Password");
+
       })
   }
 

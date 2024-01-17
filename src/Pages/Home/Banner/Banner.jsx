@@ -17,7 +17,7 @@ const Banner = () => {
                 <p className='pt-5  pb-3 text-gray-500 w-5/6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vel illo veniam, nam architecto assumenda nesciunt quis tempore quam ex suscipit repudiandae, dolores officiis sed.</p>
               </div>
 
-              <button className='btn btn-wide bg-primary text-white hover:bg-green-500 '>Request Appointment</button>
+              <Link to='/ourDoctor' className='btn btn-wide bg-primary text-white hover:bg-green-500 '>Request Appointment</Link>
 
               <div className='flex gap-20 pt-20 cursor-pointer'>
 

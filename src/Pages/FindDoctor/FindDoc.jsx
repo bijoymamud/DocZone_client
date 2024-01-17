@@ -6,7 +6,7 @@ const FindDoc = () => {
   const [findDoctors, setfindDoctors] = useState([]);
 
   useEffect(() => {
-    fetch(" https://doctor-appoinment-server-nine.vercel.app/doctor")
+    fetch("https://doctor-appoinment-server-nine.vercel.app/doctor")
       .then(res => res.json())
       .then(data => setfindDoctors(data))
   }, [])

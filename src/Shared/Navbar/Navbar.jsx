@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import useAdmin from "../../hooks/useAdmin";
 import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Navbar = () => {
 
   const { user, logOut } = useContext(AuthContext);
-
+  const { isAdmin } = useAdmin();
 
   const handleLogOut = () => {
     logOut()
@@ -30,7 +31,7 @@ const Navbar = () => {
     </li>
 
     <li tabIndex={0}>
-      <Link className='font-bold text-lg' to="/blogs">Services</Link>
+      <Link className='font-bold text-lg' to="/services">Services</Link>
 
     </li>
 
@@ -95,17 +96,16 @@ const Navbar = () => {
             <ul tabIndex={0} className="dropdown-content 
              menu p-2 shadow bg-yellow-50 rounded w-48">
 
-              <li><Link to='dashboard
-              '>Dashboard</Link></li>
-              {/* {
+
+
+              {
                 isAdmin ? <>
                   <li><Link to='dashboard/manageUser
               '>Dashboard</Link></li></> : <>
                   <li><Link to='dashboard/myAppointments
               '>Dashboard</Link></li></>
-              } */}
-              {/* <li><Link to='dashboard
-              '>Dashboard</Link></li> */}
+              }
+
               <li className="mt-1"><Link>Profile</Link></li>
             </ul>
           </div>

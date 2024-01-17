@@ -15,9 +15,13 @@ import Contact from "../Pages/Home/Contact/Contact";
 import Home from "../Pages/Home/Homepage/Home";
 // import DocDetails from "../Pages/Home/SingleDoc/DocDetails";
 import DetailsLayout from "../Layout/DetailsLayout/DetailsLayout";
+import OurDoctors from "../Pages/Home/OurDoctors/OurDoctors";
+import Services from "../Pages/Home/Services/Services";
 import DocDetails from "../Pages/Home/SingleDoc/DocDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import Fail from "../Pages/SslPayment/Fail";
+import Success from "../Pages/SslPayment/Success";
 import PrivateRoute from "./PrivateRoute";
 
 
@@ -34,7 +38,11 @@ export const router = createBrowserRouter([
         path: '/contact',
         element: <Contact />
       },
-
+      {
+        path: '/services',
+        element: <Services />
+      }
+      ,
 
       {
         path: '/findDoc',
@@ -44,6 +52,20 @@ export const router = createBrowserRouter([
         path: '/beDoctor',
         element: <BeDoctor />
       },
+      {
+        path: '/ourDoctor',
+        element: <OurDoctors />
+      },
+      {
+        path: '/successPayment/:id',
+        element: <Success />
+
+      },
+
+      {
+        path: '/myAppointments/fail/:id',
+        element: <Fail />
+      }
 
 
 
@@ -75,6 +97,9 @@ export const router = createBrowserRouter([
 
 
   },
+
+  ,
+
 
 
 
@@ -110,9 +135,6 @@ export const router = createBrowserRouter([
         path: 'addReviews',
         element: <AddReview />
       }
-
-
-
 
     ]
   },

@@ -9,7 +9,7 @@ const OurDoctors = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch(" https://doctor-appoinment-server-nine.vercel.app/doctor")
+    fetch("https://doctor-appoinment-server-nine.vercel.app/doctor")
       .then(res => res.json())
       .then(data => setDoctors(data))
   }, [])
