@@ -91,7 +91,7 @@ export const router = createBrowserRouter([
       {
         path: ':id',
         element: <DocDetails />,
-        loader: ({ params }) => fetch(` http://localhost:5000/doctor/${params.id}`)
+        loader: ({ params }) => fetch(` https://doctor-appoinment-server-nine.vercel.app/doctor/${params.id}`)
       }
     ]
 

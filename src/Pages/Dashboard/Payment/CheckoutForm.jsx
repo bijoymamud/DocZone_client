@@ -26,7 +26,7 @@ const CheckoutForm = ({ myAppintment, price }) => {
 
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/create-payment-intent", {
+  //   fetch("https://doctor-appoinment-server-nine.vercel.app/create-payment-intent", {
 
 
   //     method: "POST",
