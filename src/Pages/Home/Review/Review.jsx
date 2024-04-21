@@ -7,19 +7,22 @@ const Review = () => {
     loop: true,
     mode: "free-snap",
     slides: {
-      perView: 3,
+      perView: 2,
       spacing: 15,
     },
-  })
+  });
+
+
+
   return (
-    <section className="md:pb-28">
-      <div className="container w-5/6 mx-auto text-center md:py-20">
+    <section className="pb-28">
+      <div className="container w-full md:w-5/6 mx-auto text-center md:py-20">
         <div className="pb-16">
           <h2 className="text-4xl font-extrabold">Reviewing for a Brighter Tomorrow</h2>
           <p className="pt-2 text-md text-gray-500">Where Your Opinion Matters Most: Our Customer Reviews Speak Louder!</p>
         </div>
         <div ref={sliderRef} className="keen-slider  ">
-          <div className="keen-slider__slide number-slide1">
+          <div className="keen-slider__slide  number-slide1">
 
             <div className="bg-stone-100 rounded-lg shadow-md p-6">
               <img

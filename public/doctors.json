@@ -2,7 +2,7 @@
   {
     "name": "Dr. John Smith",
     "specialty": "Cardiologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 15,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -46,7 +46,7 @@
   {
     "name": "Dr. Olivia Ramirez",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 14,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -90,7 +90,7 @@
   {
     "name": "Dr. Samuel Foster",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 17,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -134,7 +134,7 @@
   {
     "name": "Dr. Isabella Chang",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 20,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -178,7 +178,7 @@
   {
     "name": "Dr. Jackson Monroe",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 30,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -222,7 +222,7 @@
   {
     "name": "Dr. Gabrielle Taylor",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 35,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -266,7 +266,7 @@
   {
     "name": "Dr. Lily Anderson",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 35,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -310,7 +310,7 @@
   {
     "name": "Dr. Ethan Reynolds",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 40,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -354,7 +354,7 @@
   {
     "name": "Dr. Marcus Bennett",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 40,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -398,7 +398,7 @@
   {
     "name": "Dr. Sophia Rodriguez",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 50,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -442,7 +442,7 @@
   {
     "name": "Dr. Ava Mitchell",
     "specialty": "Dermatologist",
-    "visitPrice": "500 BDT",
+    "visitPrice": 55,
     "avgRating": 4.8,
     "totalRating": 120,
     "visitingHours": [
@@ -486,7 +486,7 @@
   {
     "name": "Dr. Victor Sterling",
     "specialty": "Dermatologist",
-    "visitPrice": "1500 BDT",
+    "visitPrice": 25,
     "avgRating": 4.9,
     "totalRating": 150,
     "visitingHours": [

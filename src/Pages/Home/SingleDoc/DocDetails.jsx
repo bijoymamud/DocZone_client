@@ -36,8 +36,8 @@ const DocDetails = () => {
 
 
     if (user) {
-      fetch(' https://doctor-appoinment-server-nine.vercel.app/appoinment', {
-      method: "POST",
+      fetch(' http://localhost:5000/appoinment', {
+        method: "POST",
         headers: {
           'content-type': 'application/json'
         },
@@ -184,7 +184,7 @@ const DocDetails = () => {
           <div className=' p-5 shadow-xl rounded-md'>
             <div className=' flex items-center justify-between gap-20'>
               <h1 className='text-gray-600 font-semibold'>Ticket Price</h1>
-              <h1 className='font-extrabold  card-title'>{visitPrice} <span className='font-normal'>BDT</span> </h1>
+              <h1 className='font-extrabold  card-title'>${visitPrice}</h1>
             </div>
 
             <div >

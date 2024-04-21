@@ -21,7 +21,7 @@ import DocDetails from "../Pages/Home/SingleDoc/DocDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Fail from "../Pages/SslPayment/Fail";
-import Success from "../Pages/SslPayment/Success";
+// import Success from "../Pages/SslPayment/Success";
 import PrivateRoute from "./PrivateRoute";
 
 
@@ -56,11 +56,11 @@ export const router = createBrowserRouter([
         path: '/ourDoctor',
         element: <OurDoctors />
       },
-      {
-        path: '/successPayment/:id',
-        element: <Success />
+      // {
+      //   path: '/success',
+      //   element: <Success />
 
-      },
+      // },
 
       {
         path: '/myAppointments/fail/:id',
@@ -91,7 +91,7 @@ export const router = createBrowserRouter([
       {
         path: ':id',
         element: <DocDetails />,
-        loader: ({ params }) => fetch(` https://doctor-appoinment-server-nine.vercel.app/doctor/${params.id}`)
+        loader: ({ params }) => fetch(` http://localhost:5000/doctor/${params.id}`)
       }
     ]
 

@@ -1,29 +1,31 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+// import { Elements } from '@stripe/react-stripe-js';
+// import { loadStripe } from '@stripe/stripe-js';
+// import React from 'react';
+// import { useLocation } from 'react-router-dom';
+// import CheckoutForm from './CheckoutForm';
 
-const Success = () => {
-  const { id } = useParams();
-  // const location = useLocation();
-  // const queryParams = new URLSearchParams(location.search)
-  // console.log(queryParams);
-  const location = useLocation();
-  const { bookingInfo } = location.state || {};
+// const Success = () => {
 
-  return (
-    <div>
-      <h2>Payment Component</h2>
-      {bookingInfo ? (
-        <div>
-          <p>Name: {bookingInfo.name}</p>
-          <p>Specialty: {bookingInfo.specialty}</p>
-          <p>Price: {bookingInfo.price}</p>
-          {/* Add more details as needed */}
-        </div>
-      ) : (
-        <p>No booking information found.</p>
-      )}
-    </div>
-  );
-};
+//   const location = useLocation();
+//   const params = new URLSearchParams(location.search);
 
-export default Success;
+//   const name = params.get('name');
+//   const price = params.get('price')
+//   console.log(name, price);
+
+
+//   const stripePromise = loadStripe(import.meta.env.VITE_stripeSecretKey)
+
+
+//   return (
+//     <div>
+//       <h3>Payment page</h3>
+
+//       <Elements stripe={stripePromise}>
+//         <CheckoutForm price={price} name={name}></CheckoutForm>
+//       </Elements>
+//     </div>
+//   );
+// };
+
+// export default Success;

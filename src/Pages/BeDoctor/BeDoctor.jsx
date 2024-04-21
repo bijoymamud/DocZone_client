@@ -16,7 +16,7 @@ const BeDoctor = () => {
   const onSubmit = async (data) => {
     try {
       // Make a POST request to your server endpoint
-      const response = await fetch(' https://doctor-appoinment-server-nine.vercel.app/beDoctor', {
+      const response = await fetch(' http://localhost:5000/beDoctor', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

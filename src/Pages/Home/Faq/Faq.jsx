@@ -2,7 +2,7 @@
 
 const Faq = () => {
   return (
-    <section className="container md:py-32 ">
+    <section className="container py-10 ">
       <div >
         <h1 className="text-4xl mb-10 text-center font-extrabold">Frequently Ask Question</h1>
         <div className=" md:flex items-center justify-between container mx-auto gap-5  py-10 p-5">

@@ -14,7 +14,7 @@ const Banner = () => {
             <div >
               <div className="lg:w-[570px] ">
                 <h1 className='text-6xl  font-extrabold tracking-normal'>We Help Patients <br /> Live a Healthy,<br /> Longer Life</h1>
-                <p className='pt-5  pb-3 text-gray-500 w-5/6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vel illo veniam, nam architecto assumenda nesciunt quis tempore quam ex suscipit repudiandae, dolores officiis sed.</p>
+                <p className='pt-5  pb-3 text-gray-500 w-5/6'>Empowering Healthier Lives, Extending Lifelines: Our Mission is to Guide Patients Towards Optimal Health and Longevity, Ensuring Every Moment Counts on the Path to Wellness and Vitality.</p>
               </div>
 
               <Link to='/ourDoctor' className='btn btn-wide bg-primary text-white hover:bg-green-500 '>Request Appointment</Link>
@@ -69,7 +69,7 @@ https://i.ibb.co/HD6Z6Ys/hero-img01.png */}
       <section className='py-20'>
         <div className='text-center'>
           <h2 className='text-4xl font-bold pb-3'>Providing the Best <br /> Medical Services</h2>
-          <p className='md:w-1/3 px-5 pb-10 mx-auto text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias animi incidunt quibusdam, sed aliquam!</p>
+          <p className='md:w-1/3 px-5 pb-10 mx-auto text-gray-500'>Experience Exceptional Healthcare: Our Dedicated Team Delivers Top-notch Medical Services, Guided by Compassion, Expertise, and a Commitment to Your Optimal Health and Wellness.</p>
         </div>
 
 
@@ -80,9 +80,9 @@ https://i.ibb.co/HD6Z6Ys/hero-img01.png */}
           <div className='text-center'>
             <img className='mx-auto ' src="https://i.ibb.co/L1qWP6n/icon01.png" alt="" />
             <h1 className='pt-10 pb-3  font-extrabold  text-2xl'>Find a Doctor</h1>
-            <p className='md:w-1/2 px-10 md:px-0 mx-auto text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, maxime?</p>
+            <p className='md:w-1/2 px-10 md:px-0 mx-auto text-gray-500'>Your Health Partner Awaits: Connect with the Right Doctor for You, Start Your Journey to Better Health Today.</p>
 
-            <Link to='/doctors'>
+            <Link >
               <FaArrowAltCircleRight className='mx-auto text-2xl mt-3 ' />
             </Link>
           </div>
@@ -90,8 +90,8 @@ https://i.ibb.co/HD6Z6Ys/hero-img01.png */}
           <div className='text-center mx-auto'>
             <img className='mx-auto' src="https://i.ibb.co/MpxS4vt/icon02.png" alt="" />
             <h1 className='pt-10 pb-3 font-extrabold  text-2xl'>Find Location</h1>
-            <p className='md:w-1/2 px-10 md:px-0 mx-auto text-gray-500'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, excepturi.</p>
-            <Link to='/doctors'>
+            <p className='md:w-1/2 px-10 md:px-0 mx-auto text-gray-500'>Discover Your Destination: Find Our Conveniently Located Facilities and Begin Your Journey to Health and Wellness Today.</p>
+            <Link >
               <FaArrowAltCircleRight className='mx-auto text-2xl mt-3 ' />
             </Link>
           </div>
@@ -99,8 +99,8 @@ https://i.ibb.co/HD6Z6Ys/hero-img01.png */}
           <div className='text-center'>
             <img className='mx-auto' src="https://i.ibb.co/FWkhmdm/icon03.png" alt="" />
             <h1 className='pt-10 pb-3 font-extrabold text-2xl'>Book Appointment</h1>
-            <p className='md:w-1/2 px-10 md:px-0 mx-auto text-gray-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, dolores.</p>
-            <Link to='/doctors'>
+            <p className='md:w-1/2 px-10 md:px-0 mx-auto text-gray-500'>Effortless Booking, Expert Care: Secure Your Appointment Today and Experience Personalized Healthcare Tailored to Your Needs.</p>
+            <Link >
               <FaArrowAltCircleRight className='mx-auto text-2xl mt-3 ' />
             </Link>
           </div>

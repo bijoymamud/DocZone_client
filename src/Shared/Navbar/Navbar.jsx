@@ -100,13 +100,13 @@ const Navbar = () => {
 
               {
                 isAdmin ? <>
-                  <li><Link to='dashboard/manageUser
+                  <li><Link to='/dashboard/manageUser
               '>Dashboard</Link></li></> : <>
-                  <li><Link to='dashboard/myAppointments
+                  <li><Link to='/dashboard/myAppointments
               '>Dashboard</Link></li></>
               }
 
-              <li className="mt-1"><Link>Profile</Link></li>
+
             </ul>
           </div>
 

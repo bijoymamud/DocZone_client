@@ -106,8 +106,11 @@ const Services = () => {
 
     // </section>
 
-    <section className="container  md:my-20">
-
+    <section className="container  md:my-32">
+      <div className="mb-10">
+        <h2 className="text-5xl font-extrabold pb-5 tracking-normal text-center">Our Services</h2>
+        <p className='md:w-3/6 text-center mx-auto text-gray-500'>Transforming Lives Through Exceptional Services: Your Partner for Success, Innovation, and Excellence in Every Step of the Journey.</p>
+      </div>
       <div className="grid md:grid-cols-3 gap-10 mx-auto ms-2 pt-10 ">
         {
           services.map(service => <SingleService key={service.id}

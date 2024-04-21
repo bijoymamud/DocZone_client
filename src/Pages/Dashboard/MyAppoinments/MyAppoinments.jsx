@@ -1,15 +1,18 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import useMyAppoinment from '../../../hooks/useMyAppoinment';
+import { AuthContext } from '../../../providers/AuthProvider';
 import { BookingContext } from '../../../providers/BookingProvider';
 
 const MyAppoinments = () => {
-
+  const { user } = useContext(AuthContext);
+  console.log(user);
   const { booking } = useContext(BookingContext);
   console.log(booking);
-  const [bookingDetails, setBookingDetails] = useState([])
 
   const [myAppintment] = useMyAppoinment();
   console.log(myAppintment);
+  const total = myAppintment.reduce((sum, appoinment) => appoinment.price + sum, 0)
 
 
 
@@ -18,9 +21,14 @@ const MyAppoinments = () => {
 
   return (
     <div>
+      <div className=' w-full md:gap-28 items-center mb-10 grid grid-cols-3 text-center'>
+        <h1>Appooinment: {myAppintment.length}</h1>
+        <h1>Total Price: $ {total}</h1>
+        <Link className='btn btn-sm hover:btn-success' to="/dashboard/payment">PAY</Link >
+      </div>
       <div className='w-full'>
 
-        <h1 className='underline text-md md:mb-5'>Your Appooinments:  <span className='font-extrabold'>{myAppintment.length}</span></h1>
+
         <div>
           <div className="overflow-x-auto md:ms-40">
             <table className="table table-zebra">
@@ -31,7 +39,7 @@ const MyAppoinments = () => {
                   <th>Name</th>
                   <th>Category</th>
                   <th>Price</th>
-                  <th>Payment</th>
+
 
                 </tr>
               </thead>
@@ -41,10 +49,9 @@ const MyAppoinments = () => {
                     <th>{index + 1}</th>
                     <td>{bookings.name}</td>
                     <td>{bookings.specialty}</td>
-                    <td>{bookings.price}</td>
+                    <td>$ {bookings.price}</td>
                     <td>
-                      {/* Open the modal using document.getElementById('ID').showModal() method */}
-                      <button className="btn" onClick={() => (document.getElementById('my_modal_2').showModal(), setBookingDetails(bookings))}>PAY</button>
+                      {/* <Link to={`/success?name=${bookings.name}&price=${bookings.price}`}>PAY</Link > */}
 
                     </td>
 
@@ -60,16 +67,6 @@ const MyAppoinments = () => {
               </tbody>
             </table>
           </div>
-          <dialog id="my_modal_2" className="modal">
-            <div className="modal-box">
-              <h3 className="font-bold text-lg">{bookingDetails.name}</h3>
-              <p className="py-4">{bookingDetails.specialty}</p>
-              <p className="py-4">Amount to Pay: <span className='ms-2 font-extrabold'>{bookingDetails.price} BDT</span></p>
-            </div>
-            <form method="dialog" className="modal-backdrop">
-              <button>close</button>
-            </form>
-          </dialog>
         </div>
 
       </div>

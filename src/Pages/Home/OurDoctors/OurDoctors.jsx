@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 import SingleDoc from "../SingleDoc/SingleDoc";
 
 
 const OurDoctors = () => {
-
+  const { user } = useContext(AuthContext)
+  console.log(user);
   const [doctors, setDoctors] = useState([]);
   const [displayCount, setDisplayCount] = useState(3);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch("https://doctor-appoinment-server-nine.vercel.app/doctor")
+    fetch("http://localhost:5000/doctor")
       .then(res => res.json())
       .then(data => setDoctors(data))
   }, [])
@@ -31,7 +33,7 @@ const OurDoctors = () => {
 
           <div className="grid md:grid-cols-3 gap-10 mx-auto ms-2 pt-10 ">
             {
-              doctors.slice(0, displayCount).map(doctor => <SingleDoc key={doctor.id}
+              doctors.slice(0, displayCount).map(doctor => <SingleDoc key={doctor._id}
                 doctor={doctor}
               ></SingleDoc>)
             }

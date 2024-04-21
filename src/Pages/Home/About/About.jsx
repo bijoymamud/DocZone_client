@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <section>
-      <div className='container'>
+      <div className='container mb-24'>
         <div className='flex justify-between items-center gap-30 flex-col lg:flex-row '>
           <div className='relative w-3/4 lg:w-1/2 xl:w-[770px] z-10 order-2 lg:order-1'>
             <img className='drop-shadow-lg' src="https://i.ibb.co/Z1wTWGL/about.png" alt="" />

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaHome, FaPhoneAlt, FaSearch, FaWallet } from "react-icons/fa";
-import { FaAddressBook, FaFilePen } from 'react-icons/fa6';
+import { FaAddressBook } from 'react-icons/fa6';
 import { TbUsersPlus } from "react-icons/tb";
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import useAdmin from '../hooks/useAdmin';
@@ -37,12 +37,12 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin()
 
   return (
-    <section className='container mx-auto'>
+    <section className='container mx-auto md:mt-0 mt-10'>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
           <Outlet />
-          <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+          <label htmlFor="my-drawer-2 mt-10" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
         </div>
         <div className="drawer-side">
@@ -64,8 +64,8 @@ const Dashboard = () => {
 
               </> : <>
                 <li><Link to='/dashboard/myAppointments'><FaAddressBook />My Appoinments</Link></li>
-                <li><Link to='/dashboard/payment' className='mt-1'><FaWallet />Payment</Link></li>
-                <li><Link to='/dashboard/addReviews' className='mt-1'><FaFilePen />Review</Link></li>
+                {/* <li><Link to='/dashboard/payment' className='mt-1'><FaWallet />Payment</Link></li>
+                <li><Link to='/dashboard/addReviews' className='mt-1'><FaFilePen />Review</Link></li> */}
 
                 <div className="divider"></div>
                 <li><Link to="/"><FaHome />Home</Link></li>
